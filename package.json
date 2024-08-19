@@ -1,7 +1,8 @@
 {
 	"scripts": {
 		"dev": "node -r ts-node/register --watch index.ts",
-		"format": "npx biome format --staged --write"
+		"format": "npx biome format --write",
+		"run": "tsc && node dist/index.js"
 	},
 	"dependencies": {
 		"@node-rs/bcrypt": "^1.10.4",

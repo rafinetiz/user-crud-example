@@ -16,9 +16,9 @@ export default class UserRepository {
 
 	/**
 	 * ambil data user (username, hashed password) dari database
-	 * 
+	 *
 	 * @param username username
-	 * @returns 
+	 * @returns
 	 */
 	async GetUserHash(username: string): Promise<GetUserHashData | null> {
 		return await this.db
@@ -33,12 +33,12 @@ export default class UserRepository {
 
 	/**
 	 * Buat user baru ke database
-	 * 
+	 *
 	 * fungsi akan me-return **true** jika operasi sukses.\
 	 * fungsi ini akan melemparkan error jika operasi gagal!.\
 	 * jangan lupa try-catch di handlernya :).\
 	 * seharusnya fungsi ini tidak akan me-return **false**.
-	 * 
+	 *
 	 * @param username user username
 	 * @param password user generate hashed password
 	 * @returns
@@ -55,8 +55,13 @@ export default class UserRepository {
 	}
 
 	async GetUser(user_id: number, fields: string[] = []) {
-		return await this.db.query(`SELECT ${fields.length > 0 ? fields.join(', ') : '*'} FROM tbl_users WHERE uid=$1`, [user_id]).then(result => {
-			return result.rows[0]
-		});
+		return await this.db
+			.query(
+				`SELECT ${fields.length > 0 ? fields.join(", ") : "*"} FROM tbl_users WHERE uid=$1`,
+				[user_id],
+			)
+			.then((result) => {
+				return result.rows[0];
+			});
 	}
 }

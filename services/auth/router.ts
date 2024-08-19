@@ -53,7 +53,7 @@ async function register_handler(
 		const passwordHash = await bcrypt.hash(password);
 
 		if (!(await this.userRepository.CreateUser(username, passwordHash))) {
-			return next(new Error('CreateUser return unexpected value'));
+			return next(new Error("CreateUser return unexpected value"));
 		}
 
 		res.json({ message: "ok", data: { username } });

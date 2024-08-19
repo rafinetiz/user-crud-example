@@ -1,19 +1,19 @@
 {
-  "compilerOptions": {
-    "module": "NodeNext",
-    "target": "ESNext",
-    "moduleResolution": "NodeNext",
-    "outDir": "dist",
-    "skipLibCheck": true,
-    "esModuleInterop": true,
-    "strict": true
-  },
-  "include": [
-    "repository/**/*",
-    "services/**/*",
-    "middleware/**/*",
-    "utils/**/*",
-    "types/**/*"
-  ],
-  "files": ["index.ts"]
+	"compilerOptions": {
+		"module": "NodeNext",
+		"target": "ESNext",
+		"moduleResolution": "NodeNext",
+		"outDir": "dist",
+		"skipLibCheck": true,
+		"esModuleInterop": true,
+		"strict": true
+	},
+	"include": [
+		"repository/**/*",
+		"services/**/*",
+		"middleware/**/*",
+		"utils/**/*",
+		"types/**/*"
+	],
+	"files": ["index.ts"]
 }

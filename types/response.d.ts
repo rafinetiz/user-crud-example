@@ -1,11 +1,11 @@
 export interface BaseResponse {
-  message: string;
+	message: string;
 }
 
 export type Response<D = any> = BaseResponse & {
-  data?: D;
-}
+	data?: D;
+};
 
 export type GetUserResponse = Response<{
-  user_id: number;
-}>
+	user_id: number;
+}>;
